@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ============ SEO ============ -->
+  <title>Xel i — École d'art à Dakar · Peinture, dessin, poterie, sculpture, calligraphie, crochet & théâtre</title>
+  <meta name="description" content="Xel i, première école d'art extrascolaire du Sénégal, pour enfants et adultes. Peinture, dessin, poterie, sculpture, calligraphie, crochet et théâtre — et Art-Thlète, le programme qui allie art et sport. Dakar-Mermoz, bientôt aux Almadies et à Ngor.">
+  <meta property="og:title" content="Xel i — École d'art · Dakar">
+  <meta property="og:description" content="Première école d'art extrascolaire du Sénégal, pour enfants et adultes. Un lieu qui relie. Un lieu qui élève. Un lieu qui construit l'humain.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/photos/atelier-peinture-fillette.jpg">
+  <meta property="og:locale" content="fr_SN">
+
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/logo/fleur-64.png">
+  <link rel="apple-touch-icon" href="assets/logo/fleur-180.png">
+
+  <!-- ============ Polices : Pacifico (logo/accents) · Space Grotesk (titres) · Inter (lecture) ============ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Pacifico&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============ HEADER / NAVIGATION ============ -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="#top" class="header__logo" aria-label="Xel i — retour en haut de page">
+        <img src="assets/logo/xel-i-logo.png" alt="Xel i — école d'art" width="884" height="349">
+      </a>
+
+      <button class="burger" id="burger" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="nav" aria-label="Navigation principale">
+        <ul class="nav__list">
+          <li><a href="#ecole" class="nav__link">L'école</a></li>
+          <li><a href="#ateliers" class="nav__link">Ateliers</a></li>
+          <li><a href="#artthlete" class="nav__link">Art-Thlète</a></li>
+          <li><a href="#theatre" class="nav__link">Théâtre</a></li>
+          <li><a href="#galerie" class="nav__link">Galerie</a></li>
+          <li><a href="#inscription" class="nav__link nav__link--cta">S'inscrire</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-label="Introduction">
+      <!-- taches organiques décoratives -->
+      <svg class="hero__blob hero__blob--pink" viewBox="0 0 200 200" aria-hidden="true">
+        <path fill="currentColor" d="M45.7,-59.2C58.9,-49.5,69.1,-35.5,73.3,-19.7C77.6,-3.9,75.9,13.7,68.2,27.8C60.5,41.9,46.7,52.5,31.8,59.7C16.9,66.9,0.8,70.6,-15.5,68.3C-31.8,66,-48.3,57.7,-58.6,44.5C-68.9,31.3,-73,13.2,-71.6,-4.3C-70.2,-21.8,-63.3,-38.6,-51.3,-48.6C-39.3,-58.6,-22.2,-61.8,-4.1,-57.1C14,-52.4,32.5,-68.9,45.7,-59.2Z" transform="translate(100 100)"/>
+      </svg>
+      <svg class="hero__blob hero__blob--yellow" viewBox="0 0 200 200" aria-hidden="true">
+        <path fill="currentColor" d="M39.9,-51.9C54.3,-42.4,69.5,-32.2,74.6,-18.2C79.7,-4.2,74.7,13.7,66.1,28.9C57.5,44.1,45.2,56.7,30.5,62.8C15.8,68.9,-1.4,69.6,-17.6,64.9C-33.8,60.2,-49,50.1,-59.3,36.1C-69.6,22.1,-75,4.1,-71.8,-11.9C-68.6,-27.9,-56.8,-41.9,-43,-51.6C-29.2,-61.3,-14.6,-66.7,-0.2,-66.4C14.1,-66.2,25.5,-61.4,39.9,-51.9Z" transform="translate(100 100)"/>
+      </svg>
+
+      <div class="hero__inner">
+        <div class="hero__content">
+          <p class="hero__badge reveal-load" style="--d:.1s">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.5" fill="currentColor"/></svg>
+            Dakar-Mermoz&nbsp;·&nbsp;enfants &amp; adultes
+          </p>
+
+          <h1 class="hero__title" aria-label="Un lieu qui relie. Un lieu qui élève. Un lieu qui construit l'humain.">
+            <span class="line"><span class="word">Un&nbsp;lieu&nbsp;qui</span> <span class="word accent-underline">relie</span><span class="word">.</span></span>
+            <span class="line"><span class="word">Un&nbsp;lieu&nbsp;qui</span> <span class="word accent-underline accent-underline--pink">élève</span><span class="word">.</span></span>
+            <span class="line"><span class="word">Un</span> <span class="word">lieu</span> <span class="word">qui</span> <span class="word">construit</span></span>
+            <span class="line"><span class="word script">l'humain.</span></span>
+          </h1>
+
+          <p class="hero__text reveal-load" style="--d:.9s">
+            <strong>Xel i</strong> est la première école d'art extrascolaire du Sénégal, pour
+            enfants et adultes. Notre conviction : développer les compétences artistiques dès le
+            plus jeune âge — dans un monde où l'image prend de plus en plus de place, savoir la
+            créer est devenu indispensable.
+          </p>
+
+          <div class="hero__actions reveal-load" style="--d:1.05s">
+            <a href="#ecole" class="btn btn--primary">Découvrir l'école</a>
+            <a href="#inscription" class="btn btn--ghost">S'inscrire</a>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal-load" style="--d:.5s">
+          <div class="hero__arch">
+            <img src="assets/photos/atelier-peinture-fillette.jpg"
+                 alt="Une petite élève de Xel i, entourée de pinceaux, concentrée sur sa peinture"
+                 width="1600" height="1067" fetchpriority="high" style="object-position: 62% center;">
+          </div>
+          <!-- trait de pinceau décoratif -->
+          <svg class="hero__scribble" viewBox="0 0 120 40" aria-hidden="true">
+            <path d="M4 30 C 25 8, 45 8, 60 22 S 95 38, 116 12" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE / BANDEAU DÉFILANT ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span class="marquee__group">
+          Peinture <i class="fleur">✿</i> Dessin <i class="fleur">✿</i> Poterie <i class="fleur">✿</i> Sculpture <i class="fleur">✿</i> Calligraphie <i class="fleur">✿</i> Crochet <i class="fleur">✿</i> Théâtre <i class="fleur">✿</i> Enfants &amp; adultes <i class="fleur">✿</i>
+        </span>
+        <span class="marquee__group">
+          Peinture <i class="fleur">✿</i> Dessin <i class="fleur">✿</i> Poterie <i class="fleur">✿</i> Sculpture <i class="fleur">✿</i> Calligraphie <i class="fleur">✿</i> Crochet <i class="fleur">✿</i> Théâtre <i class="fleur">✿</i> Enfants &amp; adultes <i class="fleur">✿</i>
+        </span>
+      </div>
+    </div>
+
+    <!-- ============ L'ÉCOLE / LA VISION ============ -->
+    <section class="section vision" id="ecole">
+      <div class="container vision__grid">
+        <div class="vision__visual reveal">
+          <div class="vision__photo">
+            <img src="assets/photos/atelier-crochet-mains.jpg"
+                 alt="Gros plan sur les mains d'une élève apprenant le crochet à l'atelier"
+                 width="1066" height="1600" loading="lazy">
+          </div>
+          <figure class="vision__quote-card reveal" style="--d:.25s">
+            <blockquote>
+              « L'art est le <em>troisième œil</em> d'un peuple : sa conscience, son reflet, sa puissance. »
+            </blockquote>
+          </figure>
+        </div>
+
+        <div class="vision__content">
+          <p class="section__label reveal">La vision</p>
+          <h2 class="section__title reveal" style="--d:.08s">
+            L'art pour tous, <span class="script accent">dès le plus jeune âge</span>
+          </h2>
+          <p class="reveal" style="--d:.16s">
+            Xel i est née d'une conviction profonde : les compétences artistiques doivent être
+            accessibles à tous les enfants sénégalais, dès le plus jeune âge. Xel i n'est pas un
+            simple lieu d'activités — c'est un espace de construction intérieure, de construction
+            sociale et de découverte de soi, ancré dans les valeurs humanistes et la richesse
+            culturelle de l'Afrique de l'Ouest.
+          </p>
+          <p class="reveal" style="--d:.22s">
+            L'ambition est aujourd'hui plus large : devenir un espace artistique multiculturel et
+            multigénérationnel, avec des cours adaptés à chaque âge et des ateliers qui rassemblent
+            les familles autour de la création. Et pour être au plus proche des familles, Xel i
+            veut ouvrir des écoles partout au Sénégal.
+          </p>
+
+          <p class="ouvertures reveal" style="--d:.26s">
+            <span class="ouvertures__pin" aria-hidden="true">📍</span>
+            <span><strong>Bientôt près de chez vous :</strong> prochaines ouvertures aux
+            <strong>Almadies</strong> et à <strong>Ngor</strong>.</span>
+          </p>
+
+          <ul class="stats reveal" style="--d:.3s">
+            <li class="stat">
+              <span class="stat__num"><span data-count="1">1</span><sup>ʳᵉ</sup></span>
+              <span class="stat__label">école d'art extrascolaire du Sénégal, enfants &amp; adultes</span>
+            </li>
+            <li class="stat">
+              <span class="stat__num"><span data-count="7">7</span> disciplines</span>
+              <span class="stat__label">de la peinture au théâtre, en passant par la calligraphie</span>
+            </li>
+            <li class="stat">
+              <span class="stat__num">dès <span data-count="2">2</span> ans ½</span>
+              <span class="stat__label">avec Art-Thlète à Mermoz — et des cours pour adultes</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VALEURS ============ -->
+    <section class="section section--tinted valeurs" id="valeurs">
+      <div class="container">
+        <p class="section__label reveal">Nos valeurs fondatrices</p>
+        <h2 class="section__title reveal" style="--d:.08s">
+          Révéler, accompagner, <span class="script accent">soutenir</span>
+        </h2>
+        <p class="section__intro reveal" style="--d:.14s">
+          Chez Xel i, nous croyons que chaque enfant porte en lui une intelligence créative, une
+          sensibilité unique et un potentiel d'expression profond. Notre rôle n'est pas de formater.
+        </p>
+
+        <ul class="cards cards--4">
+          <li class="card reveal" style="--d:0s">
+            <span class="card__icon" aria-hidden="true">🎨</span>
+            <h3>Accessibilité</h3>
+            <p>L'art pour tous, dès 3 ans, partout au Sénégal. L'art n'est pas réservé à une élite : c'est une discipline à part entière, un outil de construction personnelle et collective.</p>
+          </li>
+          <li class="card reveal" style="--d:.1s">
+            <span class="card__icon" aria-hidden="true">🤝</span>
+            <h3>Collaboration profonde</h3>
+            <p>Nous ne sommes pas un prestataire. Nous sommes un partenaire engagé, convaincu que l'art transforme l'enfant de l'intérieur.</p>
+          </li>
+          <li class="card reveal" style="--d:.2s">
+            <span class="card__icon" aria-hidden="true">🌱</span>
+            <h3>Impact réel &amp; durable</h3>
+            <p>Créativité, confiance en soi, concentration, bien-être émotionnel — l'art agit profondément sur le développement global de l'enfant.</p>
+          </li>
+          <li class="card reveal" style="--d:.3s">
+            <span class="card__icon" aria-hidden="true">🕊️</span>
+            <h3>Expression libre</h3>
+            <p>Valoriser la création, le regard et la parole de chaque enfant. Nous n'imposons pas un modèle à reproduire : nous accompagnons un cheminement singulier.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ PÉDAGOGIE ============ -->
+    <section class="section pedagogie" id="pedagogie">
+      <div class="container">
+        <div class="pedagogie__head">
+          <div>
+            <p class="section__label reveal">Notre approche pédagogique</p>
+            <h2 class="section__title reveal" style="--d:.08s">
+              La liberté dans un <span class="accent-underline accent-underline--pink">cadre sécurisant</span>
+            </h2>
+          </div>
+          <p class="section__intro reveal" style="--d:.14s">
+            Chaque atelier Xel i est pensé comme un espace d'exploration, de liberté et de
+            bienveillance. Nous ne cherchons pas à produire des artistes : nous accompagnons
+            des enfants qui grandissent.
+          </p>
+        </div>
+
+        <ul class="cards cards--3">
+          <li class="card card--line reveal" style="--d:0s">
+            <span class="card__num" aria-hidden="true">01</span>
+            <h3>Progression</h3>
+            <p>Chaque programme est structuré sur 6 mois, du geste libre à la création autonome. Chaque étape a du sens et s'appuie sur la précédente.</p>
+          </li>
+          <li class="card card--line reveal" style="--d:.12s">
+            <span class="card__num" aria-hidden="true">02</span>
+            <h3>Adaptation</h3>
+            <p>Les activités sont ajustées à l'âge, au niveau et aux besoins de chaque enfant. L'erreur est valorisée comme étape normale du cheminement créatif.</p>
+          </li>
+          <li class="card card--line reveal" style="--d:.24s">
+            <span class="card__num" aria-hidden="true">03</span>
+            <h3>Valorisation</h3>
+            <p>Chaque enfant repart avec ses créations. Le processus prime sur le résultat. Chaque progrès, même petit, est reconnu, nommé et célébré.</p>
+          </li>
+        </ul>
+
+        <div class="competences reveal">
+          <h3 class="competences__title">Ce que l'art développe <span class="script accent">concrètement</span></h3>
+          <ul class="competences__list">
+            <li class="reveal" style="--d:0s">
+              <span class="chip" aria-hidden="true">🧠</span>
+              <div><strong>Cognitives</strong><p>Concentration, attention, pensée critique, autonomie, mémoire, motricité fine.</p></div>
+            </li>
+            <li class="reveal" style="--d:.08s">
+              <span class="chip" aria-hidden="true">❤️</span>
+              <div><strong>Émotionnelles</strong><p>Gestion des émotions, conscience de soi, confiance en soi et dans les autres.</p></div>
+            </li>
+            <li class="reveal" style="--d:.16s">
+              <span class="chip" aria-hidden="true">🤝</span>
+              <div><strong>Sociales</strong><p>Travail en groupe, écoute, respect de l'autre, compréhension de soi et du groupe.</p></div>
+            </li>
+            <li class="reveal" style="--d:.24s">
+              <span class="chip" aria-hidden="true">🌍</span>
+              <div><strong>Culturelles</strong><p>Ancrage identitaire, ouverture au monde, sens esthétique, histoire de l'art.</p></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ATELIERS ============ -->
+    <section class="section section--tinted ateliers" id="ateliers">
+      <div class="container">
+        <p class="section__label reveal">Nos cours d'art</p>
+        <h2 class="section__title reveal" style="--d:.08s">
+          7 disciplines pour <span class="script accent">grandir en créant</span>
+        </h2>
+        <p class="section__intro reveal" style="--d:.14s">
+          Une formule accessible qui ouvre l'accès à de nombreuses disciplines — pour les enfants,
+          et aussi pour les adultes.
+        </p>
+
+        <ul class="ateliers__grid">
+          <li class="atelier-card reveal" style="--d:0s">
+            <div class="atelier-card__img">
+              <img src="assets/photos/atelier-peinture-toile.jpg"
+                   alt="Une élève aux longues tresses peint une sirène sur sa toile bleue"
+                   width="1600" height="1066" loading="lazy">
+            </div>
+            <div class="atelier-card__body">
+              <h3>Peinture</h3>
+              <p>Liberté de création : choix des couleurs, des formes, de l'interprétation et de l'expérimentation — le geste libre avant tout.</p>
+            </div>
+          </li>
+
+          <li class="atelier-card reveal" style="--d:.08s">
+            <div class="atelier-card__img">
+              <img src="assets/photos/atelier-dessin-regle.jpg"
+                   alt="Un élève trace ses repères à la règle avant de dessiner"
+                   width="1066" height="1600" loading="lazy" style="object-position: center 38%;">
+            </div>
+            <div class="atelier-card__body">
+              <h3>Dessin</h3>
+              <p>Le regard avant le trait : observation, repères et perspective — les fondations de toutes les autres disciplines.</p>
+            </div>
+          </li>
+
+          <li class="atelier-card reveal" style="--d:.16s">
+            <div class="atelier-card__img">
+              <img src="assets/photos/atelier-poterie-pots.jpg"
+                   alt="Trois pots fraîchement peints en rose, rouge et violet sèchent au soleil de l'atelier"
+                   width="1066" height="1600" loading="lazy" style="object-position: center 62%;">
+            </div>
+            <div class="atelier-card__body">
+              <h3>Poterie &amp; sculpture</h3>
+              <p>La matière prend forme entre les mains : modelage, volumes, motricité fine et patience du geste.</p>
+            </div>
+          </li>
+
+          <li class="atelier-card reveal" style="--d:.24s">
+            <div class="atelier-card__img atelier-card__img--illu" aria-hidden="true">
+              <!-- Illustration calligraphie aux couleurs de la charte -->
+              <svg viewBox="0 0 300 200" role="img" aria-label="Illustration d'un trait de calligraphie">
+                <circle cx="240" cy="52" r="34" fill="#DFB0CD" opacity=".5"/>
+                <circle cx="55" cy="150" r="26" fill="#EBBE36" opacity=".45"/>
+                <path d="M40 130 C 80 40, 120 40, 150 95 S 215 165, 262 78"
+                      fill="none" stroke="#3E4E3E" stroke-width="14" stroke-linecap="round"/>
+                <path d="M40 130 C 80 40, 120 40, 150 95"
+                      fill="none" stroke="#EBBE36" stroke-width="5" stroke-linecap="round" opacity=".85"/>
+                <circle cx="268" cy="66" r="7" fill="#3E4E3E"/>
+              </svg>
+            </div>
+            <div class="atelier-card__body">
+              <h3>Calligraphie</h3>
+              <p>L'élégance du trait : rythme, précision et concentration — l'écriture devient un art à part entière.</p>
+            </div>
+          </li>
+
+          <li class="atelier-card reveal" style="--d:.32s">
+            <div class="atelier-card__img">
+              <img src="assets/photos/atelier-crochet-enfant.jpg"
+                   alt="Une encadrante guide les mains d'une petite élève qui apprend le crochet"
+                   width="1600" height="1066" loading="lazy">
+            </div>
+            <div class="atelier-card__body">
+              <h3>Crochet &amp; arts textiles</h3>
+              <p>Des ateliers qui rassemblent les générations autour du fil — concentration, minutie et fierté de l'objet fini.</p>
+            </div>
+          </li>
+
+          <li class="atelier-card atelier-card--theatre reveal" style="--d:.4s">
+            <div class="atelier-card__img atelier-card__img--illu" aria-hidden="true">
+              <!-- Illustration masques de théâtre aux couleurs de la charte -->
+              <svg viewBox="0 0 300 200" role="img" aria-label="Illustration de masques de théâtre">
+                <circle cx="70" cy="55" r="38" fill="#DFB0CD" opacity=".55"/>
+                <circle cx="245" cy="150" r="30" fill="#EBBE36" opacity=".5"/>
+                <g transform="rotate(-8 120 100)">
+                  <ellipse cx="120" cy="100" rx="46" ry="56" fill="#EBBE36"/>
+                  <circle cx="104" cy="88" r="6" fill="#3E4E3E"/>
+                  <circle cx="136" cy="88" r="6" fill="#3E4E3E"/>
+                  <path d="M100 118 Q120 138 140 118" stroke="#3E4E3E" stroke-width="6" fill="none" stroke-linecap="round"/>
+                </g>
+                <g transform="rotate(10 195 105)">
+                  <ellipse cx="195" cy="105" rx="42" ry="52" fill="#DFB0CD"/>
+                  <circle cx="181" cy="94" r="5.5" fill="#3E4E3E"/>
+                  <circle cx="209" cy="94" r="5.5" fill="#3E4E3E"/>
+                  <path d="M179 132 Q195 118 211 132" stroke="#3E4E3E" stroke-width="6" fill="none" stroke-linecap="round"/>
+                </g>
+                <path d="M30 170 C 60 150, 90 185, 130 170" stroke="#3E4E3E" stroke-width="4" fill="none" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="atelier-card__body">
+              <h3>Théâtre</h3>
+              <p>Corps, voix et présence : l'enfant découvre qu'il a quelque chose à dire au monde. <a class="link-arrow" href="#theatre">Voir le programme théâtre</a></p>
+            </div>
+          </li>
+        </ul>
+
+        <p class="ateliers__adultes reveal">
+          <span aria-hidden="true">🎨</span>
+          <strong>Et pour les adultes ?</strong> Des cours de dessin et de peinture sont ouverts —
+          pour l'instant ! D'autres disciplines arrivent.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ ART-THLÈTE (programme signature art + sport) ============ -->
+    <section class="section artthlete" id="artthlete">
+      <div class="container artthlete__grid">
+        <div class="artthlete__content">
+          <p class="section__label reveal">Programme signature</p>
+          <h2 class="section__title reveal" style="--d:.08s">
+            <span class="script accent">Art-Thlète</span>, quand l'artiste rencontre l'athlète
+          </h2>
+          <p class="reveal" style="--d:.16s">
+            La fusion d'<em>artiste</em> et d'<em>athlète</em> : un programme unique qui allie
+            art et sport pour développer l'enfant — le corps et la créativité grandissent ensemble.
+          </p>
+          <ul class="artthlete__badges reveal" style="--d:.22s">
+            <li>
+              <span class="chip" aria-hidden="true">🏝️</span>
+              <div><strong>Cet été sur l'île de Ngor</strong><p>pour les 6 à 18 ans</p></div>
+            </li>
+            <li>
+              <span class="chip" aria-hidden="true">🏠</span>
+              <div><strong>À Mermoz</strong><p>dès 2 ans et demi</p></div>
+            </li>
+          </ul>
+          <div class="hero__actions reveal" style="--d:.28s">
+            <a href="https://wa.me/221787164646?text=Bonjour%20Xel%20i%20!%20Je%20souhaite%20des%20informations%20sur%20le%20programme%20Art-Thl%C3%A8te." class="btn btn--primary" target="_blank" rel="noopener">Inscrire mon enfant sur WhatsApp</a>
+            <a href="#contact" class="btn btn--ghost">Poser une question</a>
+          </div>
+        </div>
+
+        <div class="artthlete__visual reveal" style="--d:.15s">
+          <div class="artthlete__photo">
+            <img src="assets/photos/artthlete-fresque-plage.jpg"
+                 alt="En plein air, un jeune élève peint une grande fresque de plage sénégalaise"
+                 width="1600" height="1066" loading="lazy">
+          </div>
+          <p class="artthlete__sticker script" aria-hidden="true">art + sport&nbsp;!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ THÉÂTRE À L'ÉCOLE (offre établissements) ============ -->
+    <section class="section section--dark theatre" id="theatre">
+      <div class="container">
+        <div class="theatre__head">
+          <p class="section__label section__label--light reveal">🎭 Le théâtre à l'école</p>
+          <h2 class="section__title reveal" style="--d:.08s">
+            « Sur scène comme dans la vie — <span class="script accent-yellow">l'enfant qui ose</span> est l'enfant qui grandit. »
+          </h2>
+          <p class="section__intro reveal" style="--d:.14s">
+            Le théâtre est l'une des disciplines les plus complètes pour le développement de l'enfant.
+            Pratiqué régulièrement, il ne lui apprend pas à jouer un rôle — il lui apprend à se
+            connaître, à s'exprimer et à habiter le monde avec confiance et présence.
+          </p>
+        </div>
+
+        <ul class="cards cards--4 cards--on-dark">
+          <li class="card reveal" style="--d:0s">
+            <span class="card__icon" aria-hidden="true">🗣️</span>
+            <h3>Expression orale &amp; confiance</h3>
+            <p>Prendre la parole, projeter sa voix, structurer ses idées — des compétences qui se transfèrent dans toutes les matières et dans la vie.</p>
+          </li>
+          <li class="card reveal" style="--d:.1s">
+            <span class="card__icon" aria-hidden="true">❤️</span>
+            <h3>Intelligence émotionnelle</h3>
+            <p>Identifier, nommer et incarner des émotions : l'enfant développe une conscience fine de lui-même et de l'autre.</p>
+          </li>
+          <li class="card reveal" style="--d:.2s">
+            <span class="card__icon" aria-hidden="true">🤝</span>
+            <h3>Esprit d'équipe &amp; écoute</h3>
+            <p>Le jeu théâtral est collectif : écoute, respect du rythme de l'autre et co-construction — un vrai laboratoire du vivre-ensemble.</p>
+          </li>
+          <li class="card reveal" style="--d:.3s">
+            <span class="card__icon" aria-hidden="true">🧠</span>
+            <h3>Concentration &amp; mémoire</h3>
+            <p>Apprendre un texte, tenir un rôle, réagir à l'imprévu : des ressources cognitives profondes mobilisées de façon ludique.</p>
+          </li>
+        </ul>
+
+        <div class="theatre__programme reveal">
+          <h3>Un programme de <span class="script accent-yellow">6 mois</span> qui couvre :</h3>
+          <ul class="tags">
+            <li>🏃 Corps en mouvement</li>
+            <li>😊 Jeux d'émotions</li>
+            <li>🎤 La voix &amp; l'intonation</li>
+            <li>🦁 Imitation &amp; personnages</li>
+            <li>📖 Histoires jouées</li>
+            <li>🤲 Improvisation guidée</li>
+            <li>🌟 Travail collectif</li>
+            <li>🎭 Mini-spectacle final</li>
+          </ul>
+        </div>
+
+        <div class="theatre__offer reveal">
+          <div class="theatre__offer-text">
+            <h3>Vous dirigez un établissement scolaire&nbsp;?</h3>
+            <p>
+              Xel i intègre des ateliers hebdomadaires de théâtre à votre programme et prend tout en
+              charge : <strong>intervenant qualifié, conception des séances, matériel et suivi
+              pédagogique</strong>. Vous fournissez simplement un espace disponible. Chaque programme
+              se clôt sur une représentation devant les familles — un moment de fierté partagée.
+            </p>
+            <a href="#contact" class="btn btn--yellow">Demander une rencontre sans engagement</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ L'ÉQUIPE ============ -->
+    <section class="section section--tinted equipe" id="equipe">
+      <div class="container equipe__grid">
+        <div class="equipe__visual reveal">
+          <div class="equipe__photo-main">
+            <img src="assets/photos/equipe-sculpture-prof.jpg"
+                 alt="Un professeur de Xel i sculpte une tête en argile pendant qu'une élève travaille à ses côtés"
+                 width="1600" height="1066" loading="lazy">
+          </div>
+          <div class="equipe__photo-small reveal" style="--d:.2s">
+            <img src="assets/photos/equipe-accompagnement-peinture.jpg"
+                 alt="Un professeur guide le pinceau d'un jeune élève devant sa toile"
+                 width="1066" height="1600" loading="lazy">
+          </div>
+        </div>
+
+        <div class="equipe__content">
+          <p class="section__label reveal">L'équipe</p>
+          <h2 class="section__title reveal" style="--d:.08s">
+            Jeune, passionnée, <span class="script accent">diplômée des Beaux-Arts</span>
+          </h2>
+          <p class="reveal" style="--d:.16s">
+            Nos professeurs sont diplômés des Beaux-Arts, jeunes et passionnés. Plus qu'une
+            école, Xel i est un lieu de vie où les enfants grandissent ensemble — entourés
+            d'adultes qui aiment profondément leur métier.
+          </p>
+          <p class="reveal" style="--d:.22s">
+            Une question, un doute, une inscription de dernière minute ? L'équipe est très
+            réactive par appel et WhatsApp, à toute heure.
+          </p>
+          <div class="hero__actions reveal" style="--d:.28s">
+            <a href="https://wa.me/221787164646?text=Bonjour%20Xel%20i%20!" class="btn btn--primary" target="_blank" rel="noopener">Écrire sur WhatsApp — 24h/24</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALERIE ============ -->
+    <section class="section galerie" id="galerie">
+      <div class="container">
+        <p class="section__label reveal">La vie de l'école</p>
+        <div class="galerie__head">
+          <h2 class="section__title reveal" style="--d:.08s">
+            Dans nos ateliers, <span class="script accent">en images</span>
+          </h2>
+          <div class="slider__controls reveal" style="--d:.16s">
+            <button type="button" class="slider__btn" id="slider-prev" aria-label="Photos précédentes">&#8592;</button>
+            <button type="button" class="slider__btn" id="slider-next" aria-label="Photos suivantes">&#8594;</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider reveal" style="--d:.2s">
+        <ul class="slider__track" id="slider-track" tabindex="0" aria-label="Galerie photos de l'école — utilisez les flèches pour faire défiler">
+          <li class="slider__item">
+            <button type="button" class="galerie__btn" data-full="assets/photos/equipe-sculpture-prof.jpg" aria-label="Agrandir : professeur sculptant une tête en argile">
+              <img src="assets/photos/equipe-sculpture-prof.jpg" alt="Professeur de Xel i sculptant une tête en argile dans l'atelier" width="1600" height="1066" loading="lazy">
+            </button>
+          </li>
+          <li class="slider__item">
+            <button type="button" class="galerie__btn" data-full="assets/photos/oeuvres-eleves.jpg" aria-label="Agrandir : œuvres des élèves en sequins, perles et boutons">
+              <img src="assets/photos/oeuvres-eleves.jpg" alt="Trois portraits créés par les élèves en sequins, perles et boutons" width="1066" height="1600" loading="lazy">
+            </button>
+          </li>
+          <li class="slider__item">
+            <button type="button" class="galerie__btn" data-full="assets/photos/atelier-peinture-toile.jpg" aria-label="Agrandir : élève peignant sa toile">
+              <img src="assets/photos/atelier-peinture-toile.jpg" alt="Élève aux longues tresses peignant une sirène sur toile bleue" width="1600" height="1066" loading="lazy">
+            </button>
+          </li>
+          <li class="slider__item">
+            <button type="button" class="galerie__btn" data-full="assets/photos/atelier-groupe-natte.jpg" aria-label="Agrandir : séance de dessin sur la natte">
+              <img src="assets/photos/atelier-groupe-natte.jpg" alt="Professeur et enfants réunis sur la natte pour une séance de dessin" width="1066" height="1600" loading="lazy">
+            </button>
+          </li>
+          <li class="slider__item">
+            <button type="button" class="galerie__btn" data-full="assets/photos/artthlete-fresque-plage.jpg" aria-label="Agrandir : fresque peinte en plein air">
+              <img src="assets/photos/artthlete-fresque-plage.jpg" alt="Jeune élève peignant une fresque de plage en plein air" width="1600" height="1066" loading="lazy">
+            </button>
+          </li>
+          <li class="slider__item">
+            <button type="button" class="galerie__btn" data-full="assets/photos/atelier-sculpture-artiste.jpg" aria-label="Agrandir : artiste encadrant modelant l'argile">
+              <img src="assets/photos/atelier-sculpture-artiste.jpg" alt="Artiste encadrant de Xel i concentré sur une sculpture en argile" width="1600" height="1066" loading="lazy">
+            </button>
+          </li>
+          <li class="slider__item">
+            <button type="button" class="galerie__btn" data-full="assets/photos/atelier-crochet-mains.jpg" aria-label="Agrandir : apprentissage du crochet">
+              <img src="assets/photos/atelier-crochet-mains.jpg" alt="Mains d'une élève réalisant une chaînette au crochet" width="1066" height="1600" loading="lazy">
+            </button>
+          </li>
+          <li class="slider__item">
+            <button type="button" class="galerie__btn" data-full="assets/photos/atelier-collage-fleur.jpg" aria-label="Agrandir : collage d'une fleur en papier">
+              <img src="assets/photos/atelier-collage-fleur.jpg" alt="Enfant réalisant le collage d'une fleur peinte en papier découpé" width="1600" height="1066" loading="lazy">
+            </button>
+          </li>
+          <li class="slider__item">
+            <button type="button" class="galerie__btn" data-full="assets/photos/atelier-poterie-pots.jpg" aria-label="Agrandir : pots peints à l'atelier poterie">
+              <img src="assets/photos/atelier-poterie-pots.jpg" alt="Pots fraîchement peints en rose, rouge et violet séchant au soleil" width="1066" height="1600" loading="lazy">
+            </button>
+          </li>
+          <li class="slider__item">
+            <button type="button" class="galerie__btn" data-full="assets/photos/atelier-peinture-petite-enfance.jpg" aria-label="Agrandir : atelier peinture des tout-petits">
+              <img src="assets/photos/atelier-peinture-petite-enfance.jpg" alt="Encadrante peignant un ciel étoilé avec une toute petite élève" width="1600" height="1066" loading="lazy">
+            </button>
+          </li>
+          <li class="slider__item">
+            <button type="button" class="galerie__btn" data-full="assets/photos/atelier-modelage-mains.jpg" aria-label="Agrandir : enfant modelant l'argile">
+              <img src="assets/photos/atelier-modelage-mains.jpg" alt="Mains d'un enfant façonnant l'argile sur la table de l'atelier" width="1600" height="1066" loading="lazy">
+            </button>
+          </li>
+          <li class="slider__item">
+            <button type="button" class="galerie__btn" data-full="assets/photos/atelier-sequins-artiste.jpg" aria-label="Agrandir : portrait rehaussé de sequins">
+              <img src="assets/photos/atelier-sequins-artiste.jpg" alt="Un artiste rehausse de sequins le portrait d'une femme au chapeau" width="1600" height="1066" loading="lazy">
+            </button>
+          </li>
+          <li class="slider__item">
+            <button type="button" class="galerie__btn" data-full="assets/photos/equipe-dessin-sol.jpg" aria-label="Agrandir : professeur dessinant au sol avec les enfants">
+              <img src="assets/photos/equipe-dessin-sol.jpg" alt="Professeur au bonnet traditionnel dessinant au sol avec les enfants" width="1066" height="1600" loading="lazy">
+            </button>
+          </li>
+          <li class="slider__item">
+            <button type="button" class="galerie__btn" data-full="assets/photos/atelier-crochet-groupe.jpg" aria-label="Agrandir : atelier crochet en groupe">
+              <img src="assets/photos/atelier-crochet-groupe.jpg" alt="Atelier de crochet en groupe autour de la table colorée" width="1600" height="1066" loading="lazy">
+            </button>
+          </li>
+          <li class="slider__item slider__item--cta">
+            <a class="galerie__insta" href="https://instagram.com/ecolexeli" target="_blank" rel="noopener">
+              <span class="galerie__insta-icon" aria-hidden="true">✿</span>
+              <span>Suivez la vie de l'école<br><strong>@ecolexeli</strong></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ FAMILLES ============ -->
+    <section class="section section--tinted familles" id="familles">
+      <div class="container familles__grid">
+        <div class="familles__content">
+          <p class="section__label reveal">L'alliance avec les familles</p>
+          <h2 class="section__title reveal" style="--d:.08s">
+            Grandir, <span class="script accent">ensemble</span>
+          </h2>
+          <p class="reveal" style="--d:.14s">
+            Les parents sont les premiers éducateurs de leurs enfants. Xel i reconnaît pleinement ce
+            rôle et s'engage à construire avec eux une véritable alliance éducative, fondée sur la
+            confiance, le dialogue et le respect mutuel. Les parents connaissent leur enfant de
+            l'extérieur&nbsp;; nous l'accompagnons de l'intérieur.
+          </p>
+          <ul class="checklist reveal" style="--d:.2s">
+            <li>Un dialogue régulier après chaque cours</li>
+            <li>Partager les évolutions de l'enfant, sans notation</li>
+            <li>Respecter les choix familiaux et la diversité culturelle</li>
+            <li>Être accessibles et à l'écoute à tout moment</li>
+            <li>Soutenir la parentalité, sans jamais s'y substituer</li>
+          </ul>
+          <blockquote class="familles__quote reveal" style="--d:.26s">
+            « Nous ne promettons pas que votre enfant deviendra artiste. Nous nous engageons à
+            accompagner son épanouissement, à soutenir sa confiance et à favoriser le développement
+            d'un regard unique sur le monde. »
+          </blockquote>
+        </div>
+        <div class="familles__visual reveal" style="--d:.15s">
+          <div class="familles__photo">
+            <img src="assets/photos/atelier-crochet-groupe.jpg"
+                 alt="Petits et grands réunis autour de la table pour un atelier de crochet"
+                 width="1600" height="1066" loading="lazy" class="parallax" data-speed="0.08">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INSCRIPTION ============ -->
+    <section class="section inscription" id="inscription">
+      <div class="container">
+        <div class="inscription__head">
+          <p class="section__label reveal">Inscription</p>
+          <h2 class="section__title reveal" style="--d:.08s">
+            Réservez votre place <span class="script accent">en 2 minutes</span>
+          </h2>
+          <p class="section__intro reveal" style="--d:.14s">
+            Remplissez le formulaire : votre demande part directement sur le WhatsApp de
+            l'école, et l'équipe vous répond à toute heure pour confirmer la place et les
+            horaires. Les cours ont lieu à Dakar-Mermoz.
+          </p>
+        </div>
+
+        <form class="form form--inscription reveal" style="--d:.2s" id="inscription-form" novalidate>
+          <fieldset class="form__group">
+            <legend>L'élève</legend>
+            <div class="form__row">
+              <div class="form__field">
+                <label for="i-eleve">Prénom &amp; nom de l'élève *</label>
+                <input type="text" id="i-eleve" name="eleve" required autocomplete="name" placeholder="Prénom et nom">
+                <span class="form__error" aria-live="polite"></span>
+              </div>
+              <div class="form__field">
+                <label for="i-age">Âge de l'élève *</label>
+                <input type="number" id="i-age" name="age" required min="2" max="99" inputmode="numeric" placeholder="Ex. 7">
+                <span class="form__error" aria-live="polite"></span>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form__group">
+            <legend>Le programme</legend>
+            <div class="form__field">
+              <label for="i-programme">Choisissez un cours ou un programme *</label>
+              <select id="i-programme" name="programme" required>
+                <option value="" selected disabled>— Sélectionner —</option>
+                <optgroup label="Cours d'art (enfants)">
+                  <option>Peinture</option>
+                  <option>Dessin</option>
+                  <option>Poterie &amp; sculpture</option>
+                  <option>Calligraphie</option>
+                  <option>Crochet &amp; arts textiles</option>
+                  <option>Théâtre</option>
+                </optgroup>
+                <optgroup label="Art-Thlète (art + sport)">
+                  <option>Art-Thlète — été sur l'île de Ngor (6-18 ans)</option>
+                  <option>Art-Thlète — Mermoz (dès 2 ans ½)</option>
+                </optgroup>
+                <optgroup label="Cours adultes">
+                  <option>Dessin (adultes)</option>
+                  <option>Peinture (adultes)</option>
+                </optgroup>
+              </select>
+              <span class="form__hint" id="i-programme-hint" aria-live="polite"></span>
+              <span class="form__error" aria-live="polite"></span>
+            </div>
+          </fieldset>
+
+          <fieldset class="form__group">
+            <legend>Le parent / tuteur</legend>
+            <p class="form__group-note">Ou vous-même, pour un cours adulte.</p>
+            <div class="form__row">
+              <div class="form__field">
+                <label for="i-parent">Nom complet *</label>
+                <input type="text" id="i-parent" name="parent" required autocomplete="name" placeholder="Votre nom">
+                <span class="form__error" aria-live="polite"></span>
+              </div>
+              <div class="form__field">
+                <label for="i-tel">Téléphone (WhatsApp) *</label>
+                <input type="tel" id="i-tel" name="telephone" required autocomplete="tel" placeholder="+221 ...">
+                <span class="form__error" aria-live="polite"></span>
+              </div>
+            </div>
+            <div class="form__field">
+              <label for="i-email">Email <small>(facultatif)</small></label>
+              <input type="email" id="i-email" name="email" autocomplete="email" placeholder="vous@exemple.com">
+              <span class="form__error" aria-live="polite"></span>
+            </div>
+          </fieldset>
+
+          <div class="form__field">
+            <label for="i-message">Questions ou précisions <small>(facultatif)</small></label>
+            <textarea id="i-message" name="message" rows="3"
+                      placeholder="Disponibilités, allergies, besoins particuliers, fratrie…"></textarea>
+            <span class="form__error" aria-live="polite"></span>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--full">
+            Envoyer l'inscription sur WhatsApp
+          </button>
+          <p class="form__note">
+            En envoyant, WhatsApp s'ouvre avec votre demande pré-remplie — il ne reste
+            qu'à appuyer sur « Envoyer ». Vous pouvez aussi appeler le
+            <a href="tel:+221787164646">+221 78 716 46 46</a> (24h/24).
+          </p>
+          <p class="form__status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <div class="container contact__grid">
+        <div class="contact__info">
+          <p class="section__label reveal">Contact &amp; inscription</p>
+          <h2 class="section__title reveal" style="--d:.08s">
+            Venez <span class="script accent">créer</span> avec nous
+          </h2>
+          <p class="reveal" style="--d:.14s">
+            Une question, une visite, une inscription ou un projet pour votre établissement&nbsp;?
+            Contactez-nous pour une rencontre sans engagement.
+          </p>
+
+          <ul class="contact__list reveal" style="--d:.2s">
+            <li>
+              <span class="chip" aria-hidden="true">📍</span>
+              <div><strong>Adresse</strong><p>Dakar-Mermoz, Sénégal</p></div>
+            </li>
+            <li>
+              <span class="chip" aria-hidden="true">📞</span>
+              <div><strong>Téléphone / WhatsApp — 24h/24</strong><p><a href="tel:+221787164646">+221 78 716 46 46</a> · <a href="https://wa.me/221787164646?text=Bonjour%20Xel%20i%20!" target="_blank" rel="noopener">écrire sur WhatsApp</a></p></div>
+            </li>
+            <li>
+              <span class="chip" aria-hidden="true">✉️</span>
+              <div><strong>Email</strong><p><a href="mailto:xeliecoldart@gmail.com">xeliecoldart@gmail.com</a></p></div>
+            </li>
+            <li>
+              <span class="chip" aria-hidden="true">📸</span>
+              <div><strong>Instagram</strong><p><a href="https://instagram.com/ecolexeli" target="_blank" rel="noopener">@ecolexeli</a></p></div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Formulaire — brancher sur Formspree : remplacer VOTRE_ID (voir README) -->
+        <form class="form reveal" style="--d:.15s" id="contact-form"
+              action="https://formspree.io/f/VOTRE_ID" method="POST" novalidate>
+          <div class="form__row">
+            <div class="form__field">
+              <label for="f-nom">Nom complet *</label>
+              <input type="text" id="f-nom" name="nom" required autocomplete="name" placeholder="Votre nom">
+              <span class="form__error" aria-live="polite"></span>
+            </div>
+            <div class="form__field">
+              <label for="f-tel">Téléphone</label>
+              <input type="tel" id="f-tel" name="telephone" autocomplete="tel" placeholder="+221 ...">
+              <span class="form__error" aria-live="polite"></span>
+            </div>
+          </div>
+          <div class="form__field">
+            <label for="f-email">Email *</label>
+            <input type="email" id="f-email" name="email" required autocomplete="email" placeholder="vous@exemple.com">
+            <span class="form__error" aria-live="polite"></span>
+          </div>
+          <div class="form__field">
+            <label for="f-message">Message *</label>
+            <textarea id="f-message" name="message" rows="5" required
+                      placeholder="Parlez-nous de votre enfant, de votre projet ou de votre établissement…"></textarea>
+            <span class="form__error" aria-live="polite"></span>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Envoyer le message</button>
+          <p class="form__status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <p class="footer__logo script">xel-i</p>
+        <p class="footer__tagline">« Un lieu qui relie. Un lieu qui élève.<br>Un lieu qui construit l'humain. »</p>
+      </div>
+      <nav class="footer__nav" aria-label="Liens rapides">
+        <h3>Explorer</h3>
+        <ul>
+          <li><a href="#ecole">L'école</a></li>
+          <li><a href="#ateliers">Les cours d'art</a></li>
+          <li><a href="#artthlete">Art-Thlète</a></li>
+          <li><a href="#theatre">Théâtre à l'école</a></li>
+          <li><a href="#equipe">L'équipe</a></li>
+          <li><a href="#galerie">Galerie</a></li>
+          <li><a href="#familles">Familles</a></li>
+          <li><a href="#inscription">Inscription</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer__contact">
+        <h3>Nous joindre</h3>
+        <ul>
+          <li><a href="mailto:xeliecoldart@gmail.com">xeliecoldart@gmail.com</a></li>
+          <li><a href="tel:+221787164646">+221 78 716 46 46</a></li>
+          <li><a href="https://wa.me/221787164646?text=Bonjour%20Xel%20i%20!" target="_blank" rel="noopener">WhatsApp — 24h/24</a></li>
+          <li><a href="https://instagram.com/ecolexeli" target="_blank" rel="noopener">Instagram — @ecolexeli</a></li>
+          <li>Dakar-Mermoz, Sénégal</li>
+          <li>Bientôt : Almadies &amp; Ngor</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© 2026 Xel i — École d'art · Dakar. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- ============ BOUTON WHATSAPP FLOTTANT (24h/24) ============ -->
+  <a href="https://wa.me/221787164646?text=Bonjour%20Xel%20i%20!"
+     class="whatsapp-fab" target="_blank" rel="noopener"
+     aria-label="Nous écrire sur WhatsApp — l'équipe répond 24h/24">
+    <svg viewBox="0 0 32 32" width="28" height="28" fill="currentColor" aria-hidden="true">
+      <path d="M16.04 3C9.4 3 4 8.36 4 14.95c0 2.1.56 4.16 1.62 5.97L4 29l8.28-2.16a12.1 12.1 0 0 0 3.76.6c6.63 0 12.03-5.36 12.03-11.95C28.07 8.36 22.67 3 16.04 3Zm0 21.85c-1.2 0-2.38-.2-3.5-.57l-.63-.21-4.16 1.09 1.11-4.03-.27-.42a9.7 9.7 0 0 1-1.53-5.26c0-5.38 4.42-9.77 9.98-9.77 5.55 0 9.97 4.39 9.97 9.77 0 5.39-4.42 9.4-9.97 9.4Zm5.47-7.11c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.62-.93-2.22-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.53.07-.8.37-.28.3-1.06 1.03-1.06 2.5 0 1.47 1.08 2.9 1.23 3.1.15.2 2.13 3.24 5.17 4.54.72.31 1.29.5 1.73.64.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z"/>
+    </svg>
+    <span class="whatsapp-fab__label">WhatsApp · 24h/24</span>
+  </a>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo agrandie" hidden>
+    <button class="lightbox__close" id="lightbox-close" aria-label="Fermer">&times;</button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lightbox-prev" aria-label="Photo précédente">&#8592;</button>
+    <img class="lightbox__img" id="lightbox-img" src="" alt="">
+    <button class="lightbox__nav lightbox__nav--next" id="lightbox-next" aria-label="Photo suivante">&#8594;</button>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
