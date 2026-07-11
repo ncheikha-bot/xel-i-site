@@ -1,0 +1,26 @@
+{
+  "articles": [
+    {
+      "slug": "art-thlete-ile-de-ngor-ete-2026",
+      "titre": "Art-Thlète débarque sur l'île de Ngor cet été",
+      "date": "2026-07-01",
+      "auteur": "L'équipe Xel i",
+      "categorie": "Art-Thlète",
+      "image": "assets/photos/artthlete-fresque-plage.jpg",
+      "resume": "Notre programme signature qui allie art et sport s'installe sur l'île de Ngor pour l'été, pour les 6 à 18 ans. Peinture en plein air, corps en mouvement et créativité face à la mer.",
+      "contenu": "**Art-Thlète**, c'est la fusion d'*artiste* et d'*athlète* : un programme unique qui allie art et sport pour développer l'enfant — le corps et la créativité grandissent ensemble.\n\n## Cet été, direction l'île de Ngor\n\nPour les vacances, Xel i pose ses chevalets sur l'île de Ngor. Au programme : peinture en plein air, fresques collectives, jeux d'expression et activités sportives, pour les **6 à 18 ans**.\n\n## Et pour les plus petits ?\n\nLe programme Art-Thlète est aussi disponible à Mermoz, **dès 2 ans et demi**, toute l'année.\n\n## Comment s'inscrire ?\n\nLes places sont limitées. Écrivez-nous sur WhatsApp au +221 78 716 46 46 — l'équipe répond à toute heure — ou passez par le [formulaire d'inscription](index.html#inscription) du site.",
+      "publie": true
+    },
+    {
+      "slug": "bientot-almadies-et-ngor",
+      "titre": "Bientôt deux nouvelles adresses : Almadies et Ngor",
+      "date": "2026-06-20",
+      "auteur": "L'équipe Xel i",
+      "categorie": "L'école",
+      "image": "assets/photos/equipe-sculpture-prof.jpg",
+      "resume": "Pour être au plus proche des familles, Xel i veut ouvrir des écoles partout au Sénégal. Prochaines étapes : les Almadies et Ngor.",
+      "contenu": "Depuis Mermoz, Xel i a grandi avec une conviction : les compétences artistiques doivent être accessibles à tous les enfants sénégalais, dès le plus jeune âge.\n\n## Être au plus proche des familles\n\nNotre ambition est d'ouvrir des Xel-i partout, pour que chaque famille ait une école d'art près de chez elle. Les deux prochaines ouvertures sont prévues aux **Almadies** et à **Ngor**.\n\n## En attendant\n\nLes cours continuent à Dakar-Mermoz : peinture, dessin, poterie, sculpture, calligraphie, crochet et théâtre — pour les enfants dès le plus jeune âge, et des cours de dessin et de peinture pour les adultes.\n\nUne question ? L'équipe est très réactive par appel et WhatsApp au +221 78 716 46 46.",
+      "publie": true
+    }
+  ]
+}

@@ -14,18 +14,43 @@ l'école · équipe · **galerie slider** (avec lightbox) · familles · **inscr
 ## Structure des fichiers
 
 ```
-index.html              ← page unique (toutes les sections)
+index.html              ← page d'accueil (toutes les sections)
+blog.html               ← liste des articles du blog
+article.html            ← lecture d'un article (?article=slug)
+admin.html              ← espace de gestion du blog (connexion requise)
 css/style.css           ← styles, palette, animations, responsive
-js/main.js              ← nav mobile, reveals au scroll, compteurs, parallaxe,
-                          slider galerie (flèches + défilement auto),
-                          lightbox, validation formulaire
+css/admin.css           ← styles de l'espace de gestion
+js/main.js              ← nav mobile, reveals, compteurs, parallaxe,
+                          slider galerie, lightbox, formulaires
+js/blog.js              ← chargement des articles, rendu markdown, dates
+js/admin.js             ← connexion, création/édition/suppression d'articles
+blog/articles.json      ← contenu du blog (un objet par article)
 assets/
-  logo/
-    xel-i-logo.png      ← logo détouré (fond transparent)
-    fleur-64.png        ← favicon
-    fleur-180.png       ← icône Apple touch
+  logo/                 ← logo détouré, favicons
   photos/               ← 24 photos optimisées pour le web (~160-330 Ko)
+  blog/                 ← images de couverture téléversées depuis l'admin
 ```
+
+## Blog & espace de gestion
+
+Le blog fonctionne **sans serveur** (« CMS Git ») : les articles vivent dans
+`blog/articles.json` sur GitHub, `blog.html` les affiche, et `admin.html`
+écrit directement dans le dépôt via l'API GitHub. Chaque publication
+déclenche la reconstruction du site (~1 minute).
+
+**Connexion à l'admin** (`admin.html`, lien discret « Gestion » dans le footer) :
+1. Sur github.com (compte ayant accès au dépôt) : *Settings → Developer
+   settings → Personal access tokens → Fine-grained tokens*.
+2. Créer un jeton limité au dépôt `xel-i-site`, permission **Contents :
+   Read and write**, expiration au choix.
+3. Coller ce jeton comme « clé d'accès » sur la page de connexion
+   (« Rester connecté » le mémorise sur l'appareil).
+
+**Écrire un article** : titre, date, catégorie, résumé, image de couverture
+(téléversée dans `assets/blog/`), contenu avec mise en forme simple
+(`## sous-titre`, `**gras**`, `*italique*`, `- liste`, `[texte](lien)`) et
+aperçu en direct. Décocher « Publier » enregistre un brouillon invisible
+sur le site public.
 
 ## Slider de la galerie
 

@@ -1,0 +1,205 @@
+/* ==========================================================================
+   XEL I — Styles de l'espace de gestion du blog (admin.html)
+   S'appuie sur css/style.css (palette, polices, boutons, champs de formulaire).
+   ========================================================================== */
+
+.admin-body { background: var(--cream-tint); }
+
+/* ---------- Écran de connexion ---------- */
+.admin-login {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 2rem 1.25rem;
+}
+.admin-login__card {
+  width: min(440px, 100%);
+  background: var(--white);
+  border-radius: calc(var(--radius) * 1.3);
+  box-shadow: var(--shadow);
+  padding: clamp(1.8rem, 5vw, 2.6rem);
+  display: grid;
+  gap: 1.1rem;
+}
+.admin-login__logo { width: 130px; height: auto; }
+.admin-login__card h1 { font-size: 1.6rem; }
+.admin-login__sub { color: rgba(43, 43, 42, .7); margin-top: -.8rem; }
+.admin-login__retour { text-align: center; font-size: .9rem; }
+.admin-login__retour a { color: var(--green); }
+
+.admin-souvenir {
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  font-size: .93rem;
+  cursor: pointer;
+}
+.admin-souvenir input { width: 18px; height: 18px; accent-color: var(--green); }
+
+.admin-aide { font-size: .9rem; }
+.admin-aide summary {
+  cursor: pointer;
+  color: var(--green);
+  font-weight: 600;
+}
+.admin-aide ol { margin: .7rem 0 0 1.2rem; display: grid; gap: .4rem; }
+.admin-aide code {
+  background: var(--cream);
+  padding: .1em .35em;
+  border-radius: 6px;
+  font-size: .9em;
+}
+
+/* ---------- Barre du haut ---------- */
+.admin-bar {
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: .8rem clamp(1rem, 3vw, 2rem);
+  box-shadow: 0 2px 18px rgba(43, 43, 42, .07);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.admin-bar__logo img { height: 36px; width: auto; }
+.admin-bar__titre {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--green);
+}
+.admin-bar__actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+.admin-bar__lien {
+  font-size: .92rem;
+  font-weight: 600;
+  color: var(--green);
+  text-decoration-color: var(--yellow);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+/* ---------- Panneaux ---------- */
+.admin-main {
+  width: min(980px, 100% - 2rem);
+  margin: 2rem auto 4rem;
+}
+.admin-panel {
+  background: var(--white);
+  border-radius: calc(var(--radius) * 1.2);
+  box-shadow: 0 6px 22px rgba(43, 43, 42, .05);
+  padding: clamp(1.3rem, 3vw, 2.2rem);
+}
+.admin-panel__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.4rem;
+}
+.admin-panel__head h2 { font-size: 1.4rem; }
+.admin-compte { color: rgba(43, 43, 42, .5); font-weight: 500; font-size: .9em; }
+
+.btn--petit { padding: .5rem 1.05rem; font-size: .88rem; }
+.btn--danger { border: 2px solid #c0564f; color: #c0564f; background: transparent; }
+.btn--danger::before { background: #c0564f; }
+.btn--danger:hover { color: #fff; }
+.btn--danger:hover::before { transform: translateY(0); }
+
+/* ---------- Liste des articles ---------- */
+.admin-liste { display: grid; gap: .8rem; }
+.admin-liste__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  border: 1.5px solid rgba(62, 78, 62, .14);
+  border-radius: var(--radius);
+  padding: .9rem 1.1rem;
+  transition: border-color .3s, box-shadow .3s;
+}
+.admin-liste__item:hover {
+  border-color: var(--yellow);
+  box-shadow: 0 6px 18px rgba(43, 43, 42, .06);
+}
+.admin-liste__infos {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  flex-wrap: wrap;
+}
+.admin-liste__meta { font-size: .85rem; color: rgba(43, 43, 42, .6); }
+.admin-liste__boutons { display: flex; gap: .5rem; flex-wrap: wrap; }
+.admin-liste__vide {
+  text-align: center;
+  padding: 2rem;
+  color: rgba(43, 43, 42, .6);
+}
+
+.admin-badge {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: .76rem;
+  padding: .25rem .7rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.admin-badge--publie { background: rgba(62, 78, 62, .12); color: var(--green); }
+.admin-badge--brouillon { background: rgba(235, 190, 54, .25); color: #7a6011; }
+
+/* ---------- Éditeur ---------- */
+.admin-form { display: grid; gap: 1.2rem; }
+
+.admin-image {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.admin-image img {
+  width: 130px;
+  height: 86px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid var(--cream);
+}
+.admin-image input[type="file"] { font-size: .9rem; }
+
+.admin-editeur {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  align-items: start;
+}
+.admin-apercu {
+  background: var(--cream);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.3rem;
+  max-height: 460px;
+  overflow-y: auto;
+}
+.admin-apercu__label {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: .82rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--green);
+  margin-bottom: .8rem;
+}
+.admin-apercu__vide { color: rgba(43, 43, 42, .45); font-style: italic; }
+
+.admin-form__actions { display: flex; gap: .8rem; flex-wrap: wrap; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 760px) {
+  .admin-editeur { grid-template-columns: 1fr; }
+  .admin-bar__titre { display: none; }
+  .admin-liste__boutons { width: 100%; }
+}

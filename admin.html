@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Gestion du blog — Xel i</title>
+  <meta name="description" content="Espace de gestion du blog de Xel i.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/logo/fleur-64.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Pacifico&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+
+  <!-- ============ ÉCRAN DE CONNEXION ============ -->
+  <section class="admin-login" id="ecran-connexion">
+    <div class="admin-login__card">
+      <img src="assets/logo/xel-i-logo.png" alt="Xel i" class="admin-login__logo" width="884" height="349">
+      <h1>Gestion du blog</h1>
+      <p class="admin-login__sub">Espace réservé à l'équipe de l'école.</p>
+
+      <form id="form-connexion" novalidate>
+        <div class="form__field">
+          <label for="c-token">Clé d'accès</label>
+          <input type="password" id="c-token" name="token" required
+                 autocomplete="current-password" placeholder="Collez votre clé d'accès">
+          <span class="form__error" aria-live="polite"></span>
+        </div>
+        <label class="admin-souvenir">
+          <input type="checkbox" id="c-souvenir"> Rester connecté sur cet appareil
+        </label>
+        <button type="submit" class="btn btn--primary btn--full" id="btn-connexion">Se connecter</button>
+        <p class="form__status" id="statut-connexion" aria-live="polite"></p>
+      </form>
+
+      <details class="admin-aide">
+        <summary>Où trouver ma clé d'accès ?</summary>
+        <ol>
+          <li>Connectez-vous sur <strong>github.com</strong> avec le compte de l'école.</li>
+          <li>Ouvrez <em>Settings → Developer settings → Personal access tokens → Fine-grained tokens</em>.</li>
+          <li>Créez un jeton limité au dépôt <strong>xel-i-site</strong> avec la permission <em>Contents : Read and write</em>.</li>
+          <li>Copiez la clé (elle commence par <code>github_pat_</code> ou <code>gho_</code>) et collez-la ci-dessus.</li>
+        </ol>
+      </details>
+
+      <p class="admin-login__retour"><a href="index.html">&#8592; Retour au site</a></p>
+    </div>
+  </section>
+
+  <!-- ============ TABLEAU DE BORD ============ -->
+  <section class="admin-app" id="ecran-admin" hidden>
+    <header class="admin-bar">
+      <a href="index.html" class="admin-bar__logo">
+        <img src="assets/logo/xel-i-logo.png" alt="Xel i" width="884" height="349">
+      </a>
+      <p class="admin-bar__titre">Gestion du blog</p>
+      <div class="admin-bar__actions">
+        <a href="blog.html" target="_blank" rel="noopener" class="admin-bar__lien">Voir le blog &#8599;</a>
+        <button type="button" class="btn btn--ghost btn--petit" id="btn-deconnexion">Se déconnecter</button>
+      </div>
+    </header>
+
+    <div class="admin-main">
+      <!-- Liste des articles -->
+      <div class="admin-panel" id="panneau-liste">
+        <div class="admin-panel__head">
+          <h2>Articles <span class="admin-compte" id="compte-articles"></span></h2>
+          <button type="button" class="btn btn--primary" id="btn-nouveau">+ Nouvel article</button>
+        </div>
+        <p class="form__status" id="statut-liste" aria-live="polite"></p>
+        <ul class="admin-liste" id="liste-articles"></ul>
+      </div>
+
+      <!-- Éditeur -->
+      <div class="admin-panel" id="panneau-editeur" hidden>
+        <div class="admin-panel__head">
+          <h2 id="titre-editeur">Nouvel article</h2>
+          <button type="button" class="btn btn--ghost btn--petit" id="btn-retour-liste">&#8592; Retour à la liste</button>
+        </div>
+
+        <form class="admin-form" id="form-article" novalidate>
+          <div class="form__row">
+            <div class="form__field">
+              <label for="a-titre">Titre de l'article *</label>
+              <input type="text" id="a-titre" required placeholder="Ex. Portes ouvertes en septembre">
+              <span class="form__error" aria-live="polite"></span>
+            </div>
+            <div class="form__field">
+              <label for="a-date">Date de publication *</label>
+              <input type="date" id="a-date" required>
+              <span class="form__error" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="form__field">
+              <label for="a-categorie">Catégorie *</label>
+              <select id="a-categorie" required>
+                <option>L'école</option>
+                <option>Ateliers</option>
+                <option>Art-Thlète</option>
+                <option>Théâtre</option>
+                <option>Événements</option>
+                <option>Conseils aux parents</option>
+              </select>
+              <span class="form__error" aria-live="polite"></span>
+            </div>
+            <div class="form__field">
+              <label for="a-auteur">Auteur</label>
+              <input type="text" id="a-auteur" value="L'équipe Xel i" placeholder="L'équipe Xel i">
+              <span class="form__error" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <div class="form__field">
+            <label for="a-resume">Résumé (affiché sur la page du blog) *</label>
+            <textarea id="a-resume" rows="2" required
+                      placeholder="Deux ou trois phrases qui donnent envie de lire l'article."></textarea>
+            <span class="form__error" aria-live="polite"></span>
+          </div>
+
+          <div class="form__field">
+            <label for="a-image-fichier">Image de couverture</label>
+            <div class="admin-image">
+              <img id="a-image-apercu" src="" alt="" hidden>
+              <div class="admin-image__champ">
+                <input type="file" id="a-image-fichier" accept="image/jpeg,image/png,image/webp">
+                <p class="form__group-note">JPEG, PNG ou WebP · idéalement 1600&nbsp;px de large ·
+                  ou gardez l'image actuelle.</p>
+              </div>
+            </div>
+            <span class="form__error" aria-live="polite"></span>
+          </div>
+
+          <div class="admin-editeur">
+            <div class="form__field">
+              <label for="a-contenu">Contenu de l'article *</label>
+              <textarea id="a-contenu" rows="16" required
+                        placeholder="## Un sous-titre&#10;&#10;Votre texte… avec du **gras**, de l'*italique*, des listes :&#10;- premier point&#10;- deuxième point"></textarea>
+              <p class="form__group-note">
+                Mise en forme : <code>## Sous-titre</code> · <code>**gras**</code> ·
+                <code>*italique*</code> · <code>- élément de liste</code> ·
+                <code>[texte](https://lien)</code>
+              </p>
+              <span class="form__error" aria-live="polite"></span>
+            </div>
+            <div class="admin-apercu">
+              <p class="admin-apercu__label">Aperçu en direct</p>
+              <div class="article__prose" id="a-apercu"></div>
+            </div>
+          </div>
+
+          <label class="admin-souvenir">
+            <input type="checkbox" id="a-publie" checked>
+            Publier l'article (décochez pour l'enregistrer comme brouillon)
+          </label>
+
+          <div class="admin-form__actions">
+            <button type="submit" class="btn btn--primary" id="btn-enregistrer">Enregistrer &amp; mettre en ligne</button>
+            <button type="button" class="btn btn--ghost" id="btn-annuler">Annuler</button>
+          </div>
+          <p class="form__status" id="statut-editeur" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/blog.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

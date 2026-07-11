@@ -1210,6 +1210,105 @@ h1, h2, h3 {
 }
 .whatsapp-fab { animation: fab-pulse 3s ease-out infinite; }
 
+/* ---------- 15 quater. Blog (blog.html & article.html) ---------- */
+.blog-hero { padding-top: calc(var(--header-h) + clamp(2.5rem, 6vw, 4rem)); padding-bottom: 2.5rem; }
+.blog-hero h1 { max-width: none; }
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+.blog-card a { text-decoration: none; color: inherit; display: block; height: 100%; }
+.blog-card h2 { font-size: 1.25rem; margin-bottom: .5rem; color: var(--green); }
+.blog-card .atelier-card__body p { font-size: .95rem; }
+.blog-card .link-arrow { display: inline-block; margin-top: .8rem; font-size: .92rem; }
+.blog-card__img { position: relative; background: var(--pink-soft); display: grid; place-items: center; }
+.blog-card__img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.blog-card__fleur { font-size: 3rem; color: var(--pink); }
+.blog-card__meta {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: .82rem;
+  color: rgba(43, 43, 42, .65);
+  margin-bottom: .6rem;
+}
+.blog-card__cat {
+  background: rgba(235, 190, 54, .3);
+  color: var(--green);
+  border-radius: 999px;
+  padding: .18rem .7rem;
+}
+.blog-vide {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem 1rem;
+  color: rgba(43, 43, 42, .6);
+}
+
+/* Page article */
+.article { padding-top: calc(var(--header-h) + clamp(2rem, 5vw, 3.5rem)); }
+.article__container { max-width: 760px; }
+.article__retour { margin-bottom: 1.6rem; }
+.link-arrow-retour {
+  color: var(--green);
+  font-weight: 600;
+  font-family: var(--font-display);
+  text-decoration: none;
+  border-bottom: 2px solid var(--yellow);
+  transition: border-color .3s;
+}
+.link-arrow-retour:hover { border-color: var(--pink); }
+
+.article h1 {
+  font-size: clamp(1.8rem, 4.5vw, 2.7rem);
+  margin: .5rem 0 1.4rem;
+}
+.article__cover {
+  border-radius: calc(var(--radius) * 1.3);
+  overflow: hidden;
+  margin-bottom: 2rem;
+  border: 5px solid var(--white);
+  box-shadow: var(--shadow);
+}
+.article__cover img { width: 100%; height: auto; }
+
+.article__prose { font-size: 1.05rem; }
+.article__prose p { margin-bottom: 1.1rem; }
+.article__prose h2 {
+  font-size: 1.45rem;
+  margin: 1.8rem 0 .8rem;
+  position: relative;
+  padding-left: 1rem;
+}
+.article__prose h2::before {
+  content: "";
+  position: absolute;
+  left: 0; top: .2em; bottom: .2em;
+  width: 4px;
+  border-radius: 2px;
+  background: var(--yellow);
+}
+.article__prose h3 { font-size: 1.15rem; margin: 1.4rem 0 .6rem; }
+.article__prose ul { margin: 0 0 1.1rem 1.3rem; display: grid; gap: .4rem; list-style: disc; }
+.article__prose a {
+  color: var(--green);
+  font-weight: 600;
+  text-decoration-color: var(--yellow);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+.article__prose a:hover { text-decoration-color: var(--pink); }
+.article__fin {
+  text-align: center;
+  color: var(--pink);
+  font-size: 1.6rem;
+  margin-top: 2.5rem;
+}
+
+.footer__admin { opacity: .55; }
+.footer__admin:hover { opacity: 1; }
+
 /* ---------- 16. Footer ---------- */
 .footer {
   background: var(--ink);
@@ -1250,6 +1349,7 @@ h1, h2, h3 {
 @media (max-width: 1024px) {
   .cards--4 { grid-template-columns: repeat(2, 1fr); }
   .ateliers__grid { grid-template-columns: repeat(2, 1fr); }
+  .blog-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 860px) {
@@ -1287,6 +1387,7 @@ h1, h2, h3 {
   .nav.open .nav__list li:nth-child(4) { animation-delay: .26s; }
   .nav.open .nav__list li:nth-child(5) { animation-delay: .32s; }
   .nav.open .nav__list li:nth-child(6) { animation-delay: .38s; }
+  .nav.open .nav__list li:nth-child(7) { animation-delay: .44s; }
 
   .hero { min-height: auto; }
   .hero__inner { grid-template-columns: 1fr; }
@@ -1311,6 +1412,8 @@ h1, h2, h3 {
   .artthlete__badges { grid-template-columns: 1fr; }
 
   .slider__item { height: clamp(220px, 52vw, 320px); }
+
+  .blog-grid { grid-template-columns: 1fr; }
 
   .footer__grid { grid-template-columns: 1fr; gap: 2rem; }
 }
