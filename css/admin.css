@@ -36,6 +36,34 @@
 }
 .admin-souvenir input { width: 18px; height: 18px; accent-color: var(--green); }
 
+/* Séparateur « ou » entre connexion et mode démo */
+.admin-separateur {
+  display: flex;
+  align-items: center;
+  gap: .9rem;
+  color: rgba(43, 43, 42, .45);
+  font-size: .85rem;
+}
+.admin-separateur::before,
+.admin-separateur::after {
+  content: "";
+  flex: 1;
+  height: 1.5px;
+  background: rgba(62, 78, 62, .15);
+  border-radius: 1px;
+}
+
+.admin-demo { display: grid; gap: .5rem; }
+.admin-demo .form__group-note { text-align: center; }
+
+/* Badge mode démo dans la barre du haut */
+.admin-badge--demo {
+  background: rgba(223, 176, 205, .35);
+  color: #7d3b63;
+}
+
+#form-config { display: grid; gap: 1rem; margin-top: .9rem; }
+
 .admin-aide { font-size: .9rem; }
 .admin-aide summary {
   cursor: pointer;

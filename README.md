@@ -39,12 +39,31 @@ Le blog fonctionne **sans serveur** (« CMS Git ») : les articles vivent dans
 déclenche la reconstruction du site (~1 minute).
 
 **Connexion à l'admin** (`admin.html`, lien discret « Gestion » dans le footer) :
-1. Sur github.com (compte ayant accès au dépôt) : *Settings → Developer
-   settings → Personal access tokens → Fine-grained tokens*.
-2. Créer un jeton limité au dépôt `xel-i-site`, permission **Contents :
-   Read and write**, expiration au choix.
-3. Coller ce jeton comme « clé d'accès » sur la page de connexion
-   (« Rester connecté » le mémorise sur l'appareil).
+identifiant + mot de passe. Sans backend, le mécanisme est le suivant : la clé
+GitHub est chiffrée dans le navigateur (AES-GCM 256, clé dérivée du mot de passe
+par PBKDF2 150 000 itérations) et stockée dans `blog/acces.json` ; le bon mot de
+passe la déchiffre localement, un mauvais mot de passe échoue au déchiffrement.
+Le mot de passe lui-même n'est jamais stocké ni transmis.
+
+**Configuration initiale (une fois, équipe technique)** — dépliant en bas de
+l'écran de connexion :
+1. Sur github.com : *Settings → Developer settings → Personal access tokens →
+   Fine-grained tokens* → jeton limité au dépôt `xel-i-site`, permission
+   **Contents : Read and write**.
+2. Dans le dépliant « Configuration initiale », coller ce jeton, choisir un
+   identifiant et un mot de passe (≥ 8 caractères) → le compte est enregistré
+   dans le dépôt et utilisable ~1 minute plus tard.
+3. Refaire la même opération pour changer de mot de passe ou renouveler le
+   jeton (même identifiant = remplacement), ou ajouter d'autres comptes.
+
+⚠️ Limite d'un site 100 % statique : `blog/acces.json` est public (chiffré).
+Choisissez un mot de passe solide — un mot de passe faible peut être attaqué
+hors-ligne.
+
+**Mode démo** : bouton « Découvrir en mode démo » sur l'écran de connexion —
+aucun identifiant requis. Toute l'interface fonctionne (création, édition,
+suppression, aperçu) mais rien n'est écrit dans le dépôt : idéal pour montrer
+l'outil au client.
 
 **Écrire un article** : titre, date, catégorie, résumé, image de couverture
 (téléversée dans `assets/blog/`), contenu avec mise en forme simple

@@ -28,9 +28,15 @@
 
       <form id="form-connexion" novalidate>
         <div class="form__field">
-          <label for="c-token">Clé d'accès</label>
-          <input type="password" id="c-token" name="token" required
-                 autocomplete="current-password" placeholder="Collez votre clé d'accès">
+          <label for="c-id">Identifiant</label>
+          <input type="text" id="c-id" name="username" required
+                 autocomplete="username" autocapitalize="none" placeholder="Votre identifiant">
+          <span class="form__error" aria-live="polite"></span>
+        </div>
+        <div class="form__field">
+          <label for="c-mdp">Mot de passe</label>
+          <input type="password" id="c-mdp" name="password" required
+                 autocomplete="current-password" placeholder="Votre mot de passe">
           <span class="form__error" aria-live="polite"></span>
         </div>
         <label class="admin-souvenir">
@@ -40,14 +46,47 @@
         <p class="form__status" id="statut-connexion" aria-live="polite"></p>
       </form>
 
+      <div class="admin-separateur" aria-hidden="true"><span>ou</span></div>
+
+      <div class="admin-demo">
+        <button type="button" class="btn btn--yellow btn--full" id="btn-demo">Découvrir en mode démo</button>
+        <p class="form__group-note">Aucun identifiant requis. Vous pouvez tout essayer :
+          les modifications ne sont pas publiées sur le site.</p>
+      </div>
+
       <details class="admin-aide">
-        <summary>Où trouver ma clé d'accès ?</summary>
-        <ol>
-          <li>Connectez-vous sur <strong>github.com</strong> avec le compte de l'école.</li>
-          <li>Ouvrez <em>Settings → Developer settings → Personal access tokens → Fine-grained tokens</em>.</li>
-          <li>Créez un jeton limité au dépôt <strong>xel-i-site</strong> avec la permission <em>Contents : Read and write</em>.</li>
-          <li>Copiez la clé (elle commence par <code>github_pat_</code> ou <code>gho_</code>) et collez-la ci-dessus.</li>
-        </ol>
+        <summary>Configuration initiale (équipe technique)</summary>
+        <p class="form__group-note">
+          À faire une seule fois : ce formulaire chiffre la clé GitHub avec le mot de passe
+          choisi et l'enregistre dans le dépôt. Ensuite, l'équipe se connecte simplement
+          avec l'identifiant et le mot de passe.
+        </p>
+        <form id="form-config" novalidate>
+          <div class="form__field">
+            <label for="s-token">Clé GitHub (fine-grained, permission « Contents : Read &amp; write » sur le dépôt)</label>
+            <input type="password" id="s-token" autocomplete="off" placeholder="github_pat_… ou gho_…">
+            <span class="form__error" aria-live="polite"></span>
+          </div>
+          <div class="form__field">
+            <label for="s-id">Identifiant à créer</label>
+            <input type="text" id="s-id" autocomplete="off" autocapitalize="none" placeholder="Ex. xeli">
+            <span class="form__error" aria-live="polite"></span>
+          </div>
+          <div class="form__row">
+            <div class="form__field">
+              <label for="s-mdp">Mot de passe (8 caractères min.)</label>
+              <input type="password" id="s-mdp" autocomplete="new-password" placeholder="Mot de passe">
+              <span class="form__error" aria-live="polite"></span>
+            </div>
+            <div class="form__field">
+              <label for="s-mdp2">Confirmation</label>
+              <input type="password" id="s-mdp2" autocomplete="new-password" placeholder="Encore une fois">
+              <span class="form__error" aria-live="polite"></span>
+            </div>
+          </div>
+          <button type="submit" class="btn btn--ghost btn--full" id="btn-config">Créer / mettre à jour le compte</button>
+          <p class="form__status" id="statut-config" aria-live="polite"></p>
+        </form>
       </details>
 
       <p class="admin-login__retour"><a href="index.html">&#8592; Retour au site</a></p>
@@ -61,6 +100,7 @@
         <img src="assets/logo/xel-i-logo.png" alt="Xel i" width="884" height="349">
       </a>
       <p class="admin-bar__titre">Gestion du blog</p>
+      <span class="admin-badge admin-badge--demo" id="badge-demo" hidden>Mode démo — rien n'est publié</span>
       <div class="admin-bar__actions">
         <a href="blog.html" target="_blank" rel="noopener" class="admin-bar__lien">Voir le blog &#8599;</a>
         <button type="button" class="btn btn--ghost btn--petit" id="btn-deconnexion">Se déconnecter</button>
