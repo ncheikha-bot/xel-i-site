@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Xel i — redirection…</title>
+  <script>
+    /* GitHub Pages ne connaît pas les routes React (/blog, /admin…) et sert
+       cette page en 404. On réécrit l'URL en query puis on renvoie vers
+       index.html, où le script d'amorçage restaure la route d'origine. */
+    (function () {
+      var segments = 1; // profondeur du sous-dossier ("/xel-i-site/" = 1)
+      var l = window.location;
+      var chemin = l.pathname.split("/").slice(1 + segments).join("/");
+      l.replace(
+        l.protocol + "//" + l.hostname + (l.port ? ":" + l.port : "") +
+        l.pathname.split("/").slice(0, 1 + segments).join("/") + "/?/" +
+        chemin.replace(/&/g, "~and~") +
+        (l.search ? "&" + l.search.slice(1).replace(/&/g, "~and~") : "") +
+        l.hash
+      );
+    })();
+  </script>
+</head>
+<body></body>
+</html>
